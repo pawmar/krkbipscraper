@@ -1,4 +1,4 @@
-Scraper for Krakow's BIP announcments
+Scraper for Krakow's BIP announcements
 Requires working installation of scrapy, version >= 1.0
 
 Usage:
