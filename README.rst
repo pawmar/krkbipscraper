@@ -6,4 +6,6 @@ Usage:
 
     $ cd krkbipscraper
 
-    $ scrapy runspider krkbipscraper.py -o results.json
+    $ scrapy crawl bipspider
+
+The results land in `results.json` file.
