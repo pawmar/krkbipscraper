@@ -8,4 +8,8 @@ Usage:
 
     $ scrapy crawl bipspider
 
+Options (suply with -a option to scrapy command):
+
+    limit - max of items to scrap
+
 The results land in `results.json` file.
