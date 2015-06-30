@@ -14,7 +14,20 @@ class BipSpider(scrapy.Spider):
     """Spider for Krakow's BIP."""
 
     name = 'bipspider'
-    start_urls = ['http://bip.krakow.pl/index.php?bip_id=1&sw_id=-1&tab_id=2']
+
+    def __init__(self, limit=None, to_date=None):
+        """Initial stuff.
+
+        Keyword arguments (taken from scrapy command line):
+        limit -- up to how many items to scrap
+        to_date -- down to which date scrap the items
+
+        If limit and to_date is set, limit has priority.
+        """
+        self.start_urls = [
+            'http://bip.krakow.pl/index.php?bip_id=1&sw_id=-1&tab_id=2']
+        self.limit = limit
+        self.to_date = to_date
 
     def parse(self, response):
         """Main scrapy parse function."""
